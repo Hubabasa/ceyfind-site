@@ -1,0 +1,131 @@
+.cf-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #0b1b3a;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.cf-header__inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cf-brand{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.cf-search{
+  flex: 1;
+  display: flex;
+  max-width: 650px;
+}
+
+.cf-search__input{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+}
+
+.cf-search__input::placeholder{
+  color: rgba(255,255,255,0.8);
+}
+
+.cf-search__btn{
+  padding: 0 14px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+}
+
+.cf-nav{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.cf-link{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.cf-link:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+.cf-link--ghost{
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.cf-link--join{
+  background: #fff;
+  color: #0b1b3a;
+}
+
+.cf-header-spacer{
+  height: 64px;
+}
+
+/* Mobile */
+.cf-nav-toggle{
+  display:none;
+}
+
+.cf-burger{
+  display:none;
+}
+
+@media (max-width: 768px){
+  .cf-search{
+    display:none;
+  }
+
+  .cf-burger{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    cursor:pointer;
+  }
+
+  .cf-burger span{
+    width:20px;
+    height:2px;
+    background:#fff;
+  }
+
+  .cf-nav{
+    display:none;
+    position:absolute;
+    top:64px;
+    left:0;
+    right:0;
+    background:#0b1b3a;
+    flex-direction:column;
+    padding:15px;
+  }
+
+  .cf-nav-toggle:checked ~ .cf-nav{
+    display:flex;
+  }
+}

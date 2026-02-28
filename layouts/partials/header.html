@@ -1,0 +1,36 @@
+<header class="cf-header">
+  <div class="cf-header__inner">
+    <a class="cf-brand" href="{{ .Site.BaseURL | relURL }}">
+      <span class="cf-brand__text">CeyFind</span>
+    </a>
+
+    <form class="cf-search" action="/search/" method="get" role="search">
+      <input
+        class="cf-search__input"
+        type="search"
+        name="q"
+        placeholder="What service are you looking for today?"
+        aria-label="Search"
+      />
+      <button class="cf-search__btn" type="submit" aria-label="Search">
+        🔍
+      </button>
+    </form>
+
+    <input id="cf-nav-toggle" class="cf-nav-toggle" type="checkbox" />
+    <label for="cf-nav-toggle" class="cf-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="cf-nav" aria-label="Primary">
+      <a class="cf-link" href="/services/">Services</a>
+      <a class="cf-link" href="/products/">Products</a>
+      <a class="cf-link" href="/sell/">Sell with CeyFinder</a>
+
+      <a class="cf-link cf-link--ghost" href="/signin/">Sign In</a>
+      <a class="cf-link cf-link--join" href="/join/">Join</a>
+    </nav>
+  </div>
+</header>
+
+<div class="cf-header-spacer" aria-hidden="true"></div>

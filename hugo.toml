@@ -1,4 +1,9 @@
-baseURL = "https://ceyfind.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "CeyFind"
 theme = "PaperMod"
+
+[params]
+disableThemeToggle = true
+disableScrollToTop = true
+disableLanguageSwitch = true
